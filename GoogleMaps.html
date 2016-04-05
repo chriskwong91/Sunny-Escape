@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Where do we go?</title>
+    <style>
+      #map {
+        width: 500px;
+        height: 380px;
+        background-color: #CCC;
+        }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+      </style>
+    </head>
+  <body>
+  <form>
+    Location(zipcode):<br>
+    <input id="address" type="text" name="location">
+    <br>
+    Distance willing to travel:<br>
+    <input type="text" name="distance">
+    <br>
+    Weather Conditions: <br>
+    <input type="text" name= "condition">
+    <br>
+    <input id="submit" type="button" value="Submit">
+    <br>
+  </form>  
+    <div id="floating-panel">
+    <input id="address" type="textbox" value="94547">
+    <input id="submit" type="button" value="Geocode">
+    </div>
+      <div id="map"></div>
+      <script src="googleMapScript.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+          async defer></script>
+  </body>
+</html>
